@@ -1,4 +1,4 @@
-package StringsProgram;
+package stringsProgram;
 
 public class FirstNonRepeatingChar {
 
