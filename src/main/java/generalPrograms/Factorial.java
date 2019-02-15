@@ -21,6 +21,9 @@ public class Factorial {
         if (n == 0) {
             return 1;
         }
+         else if(n<0){
+            throw new ArithmeticException("The factorial of negative number is not possible.");
+        }
         else {
             return (n * factorialByRecursion(n - 1));
         }
