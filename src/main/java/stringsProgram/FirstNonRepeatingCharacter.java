@@ -9,13 +9,12 @@ public class FirstNonRepeatingCharacter {
         System.out.printf("First Non Repeating character in : %s  is : %s \n" , "fsfdsfdsf", getFirstNonRepeatingCharacter("fsfdsfdsf"));
         System.out.printf("First Non Repeating character in : %s  is : %s \n" , "I am disco dancer", getFirstNonRepeatingCharacter("I am disco dancer"));
     }
-    /* Using two for loops [o(n^2)] to find first non repeated character of String,
+    /* Using 2 "for loops" [o(n^2)] to find first non repeated character of String,
      * Algorithm :
      * Step 1 : Get character array and loop through it to make duplicate characters value as 0 on diff index values.
      * Step 2 : When getting the values of the array, check whether it's 0 or not (if 0 then don't iterate)
      * Step 3 : After iterating the full array, if for any index value there is no duplicate value present then return
-     * that value to the function it was called from.
-     */
+     * that value to the function it was called from. */
     private static Character getFirstNonRepeatingCharacter(String string) {
         if (string == null || string.isEmpty()) {
             return null;
@@ -57,9 +56,9 @@ public class FirstNonRepeatingCharacter {
         throw new RuntimeException("didn't find any non repeated Character");
     }
     /* Finds first non repeated character in a String in just one pass.
-     * It uses two storage to cut down one iteration, standard space vs time
-     * trade-off.Since we store repeated and non-repeated character separately,
-     * at the end of iteration, first element from List is our first non repeated character from String. */
+     * It uses two storage to cut down one iteration, standard space vs time trade-off.
+     * Since we store repeated and non-repeated character separately, at the end of iteration,
+     * first element from List is our first non repeated character from String. */
     public static char firstNonRepeatingChar(String word) {
         Set<Character> repeating = new HashSet<Character>();
         List<Character> nonRepeating = new ArrayList<Character>();
@@ -84,7 +83,6 @@ public class FirstNonRepeatingCharacter {
     * Since we are going through String from first to last character,
     * when count for any character is 1, we break, it's the first non repeated character.
     * Here order is achieved by going * through String again. */
-
     public static char firstNonRepeatedCharacter(String word) {
         HashMap<Character, Integer> scoreboard = new HashMap<Character, Integer>();
         // build table [char -> count]
