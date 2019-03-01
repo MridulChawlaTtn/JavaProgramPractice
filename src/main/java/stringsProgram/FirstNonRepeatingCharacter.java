@@ -9,7 +9,7 @@ public class FirstNonRepeatingCharacter {
         System.out.printf("First Non Repeating character in : %s  is : %s \n" , "fsfdsfdsf", getFirstNonRepeatingCharacter("fsfdsfdsf"));
         System.out.printf("First Non Repeating character in : %s  is : %s \n" , "I am disco dancer", getFirstNonRepeatingCharacter("I am disco dancer"));
     }
-    /* Using 2 "for loops" [o(n^2)] to find first non repeated character of String,
+    /* Using 2 "for loops" [o(n)(n-1)/2] to find first non repeated character of String,
      * Algorithm :
      * Step 1 : Get character array and loop through it to make duplicate characters value as 0 on diff index values.
      * Step 2 : When getting the values of the array, check whether it's 0 or not (if 0 then don't iterate)
@@ -53,7 +53,7 @@ public class FirstNonRepeatingCharacter {
                 return entry.getKey();
             }
         }
-        throw new RuntimeException("didn't find any non repeated Character");
+        throw new RuntimeException("Didn't find any non repeated Character");
     }
     /* Finds first non repeated character in a String in just one pass.
      * It uses two storage to cut down one iteration, standard space vs time trade-off.
